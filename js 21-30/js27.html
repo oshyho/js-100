@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>js27번</title>
+  <style>
+    .input,
+    .answer {
+      display: flex;
+      align-items: center;
+      justify-items: center;
+      width: 50vh;
+      height: 100px;
+      margin-bottom: 5px;
+      border: 1px solid black;
+    }
+
+    span {
+      font-weight: 600;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>
+    # 문제27 : 객체 만들기
+  </h1>
+  <p>
+    첫번째 입력에서는 학생의 이름이 공백으로 구분되어 입력되고, 두번째에는 그 학생의 수학 점수가 공백으로 구분되어 주어집니다.
+  </p>
+  <p>
+    두 개를 합쳐 **학생의 이름이 key**이고 **value가 수학 점수**인 객체를 출력해주세요.
+  </p>
+  <!-- 예시 -->
+  <div style="width: 300px;height: 300px;border: 3px dashed royalblue;margin-bottom: 10px;">
+    <b>입력</b><br>
+    Yujin Hyewon<br>
+    70 100<br><br>
+    <b>출력</b><br>
+    {'Yujin': 70, 'Hyewon': 100}<br>
+  </div>
+  <!-- 정답 -->
+  <div class="inner">
+    <div class="input"></div>
+    <div class="answer"></div>
+  </div>
+  <script>
+
+    const keys = prompt('이름을 입력하세요').split(' ');
+    const values = prompt('점수를 입력하세요').split(' ');
+    const obj = {};
+    const docInput = document.querySelector('.input');
+    const answer = document.querySelector('.answer');
+    console.log(keys)
+    console.log(values)
+    for (let i = 0; i < keys.length; i++) {
+      obj[keys[i]] = parseInt(values[i], 10);
+    }
+    docInput.innerHTML += keys;
+    answer.innerHTML += values;
+    console.log(obj);
+
+</script>
+
+
+
+</body>
+
+</html>
