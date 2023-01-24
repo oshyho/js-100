@@ -1,31 +1,9 @@
-/*# 문제29 : 대문자만 지나가세요
+//  문제29 : 대문자만 지나가세요
 
-진구는 영어 학원 아르바이트를 하고 있습니다. 
-반 아이들은 알파벳을 공부하는 학생들인데 오늘은 대문자 쓰기 시험을 봤습니다.
+const test1 = 'HAPPY'
+const test2 = 'happy'
 
-**알파벳 하나만을 입력하고 
-그 알파벳이 대문자이면 YES를 아니면 NO를 출력하는 프로그램**을 만들어 주세요. */
+const upperTest = (input) => (input === input.toUpperCase()) ? "pass" : "fail"
 
-
-const test = 'A';
-const test2 = 'a';
-// const input = promt();
-
-function Alphabet(input){
-  if(input===input.toUpperCase()){
-    console.log('참')
-  }else{
-    console.log('거짓')
-  }
-}
-
-Alphabet(test)
-Alphabet(test2)
-
-/*const data = prompt('알파벳을 입력하세요.');
-
-if (data === data.toUpperCase()){
-  console.log('YES');
-} else {
-  console.log('NO');
-} */
+console.log(upperTest(test1)) // pass
+console.log(upperTest(test2)) // fail

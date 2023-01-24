@@ -1,7 +1,6 @@
 // # 문제23 : OX문제
 
 // `console.log(10/3)`의 출력 결과는 **3**이다.
-// import area from "./js25"
 
 console.log(10/3)
 var str = 'html,css,javascript,jquery,apache,php';
