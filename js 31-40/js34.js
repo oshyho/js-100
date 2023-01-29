@@ -1,23 +1,14 @@
 // let unsorted = [prompt()]
-let unsorted = prompt('공백으로 입력하세').split(' ');
-let sorted= () =>{
-  for(let i =0 ; i<unsorted.length; i++){
-    if(unsorted[i]>unsorted[i+1]){
-      continue;
-    }else{
-      sorted[i] = unsorted[i]
-    }
+function sortedTest(unsorted) {
+  let sorted = unsorted.split(' ').sort().join(' ')
+  if (unsorted === sorted) {
+    console.log('Yes')
+  } else {
+    console.log('No')
   }
-  return sorted;
 }
 
-function makeSorted(input){
-  for(let i=0; i<unsorted.length; i++){
-    if(unsorted[i] === sorted[i]){
-
-    }
-  }
-
-}
-
-makeSorted('')
+let test1 = '33 22 11'
+let test2 = '11 22 31'
+sortedTest(test1)
+sortedTest(test2)
