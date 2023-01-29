@@ -1,2 +1,2 @@
 const test  = 'hi'
-console.log(test)
+console.log(test);
